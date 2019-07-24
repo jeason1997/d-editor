@@ -11,12 +11,9 @@ module.exports = {
 
     // register your ipc messages here
     messages: {
-        'open' () {
+        open () {
             // open entry panel registered in package.json
-            Editor.Panel.open('d-editor');
-        },
-        'clicked' () {
-            Editor.log('Button clicked!');
+            Editor.Panel.open('d-editor.preview');
         }
     },
 };

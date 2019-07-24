@@ -9,8 +9,9 @@
             "message": "d-editor:open"
         }
     },
-    "panel": {
-        "main": "panel/index.js",
+    "panel.preview": {
+        "main": "panel/preview.html",
+        "ui": "polymer",
         "type": "dockable",
         "title": "d-editor",
         "width": 400,

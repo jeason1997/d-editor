@@ -1,0 +1,50 @@
+<dom-module id="d-editor-preview">
+    <template>
+        <style>
+            :host {
+                @apply(--layout-fit);
+                background: #333;
+            }
+        </style>
+
+        <h>Hello World</h>
+        <div id="rete"></div>
+    </template>
+
+    <script src="https://cdn.jsdelivr.net/npm/rete@1.4.1-rc.1/build/rete.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/rete-vue-render-plugin@0.4.0/build/vue-render-plugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/rete-connection-plugin@0.8.1/build/connection-plugin.min.js"></script>
+    <script>
+        debugger;
+
+        Editor.polymerPanel('d-editor.preview', {
+            listeners: {
+                'keydown': '_onKeyDown',
+            },
+
+            properties: {
+                scale: {
+                    type: Number,
+                    value: 1.0,
+                },
+            },
+
+            ready: function () {
+
+            },
+
+            _onKeyDown: function (event) {
+                event.stopPropagation();
+
+                if (Editor.KeyCode(event.which) === 'space') {
+                    var numSocket = new Rete.Socket('Number value');
+
+                    const container = document.querySelector('#rete');
+                    const editor = new Rete.NodeEditor('demo@0.1.0', container);
+
+                    Editor.log(editor);
+                }
+            },
+        });
+    </script>
+</dom-module>
