@@ -18,6 +18,7 @@
         "height": 300
     },
     "dependencies": {
+        "litegraph.js": "^0.7.0",
         "rete": "^1.4.1-rc.1",
         "rete-connection-plugin": "^0.8.1",
         "rete-vue-render-plugin": "^0.4.0"
