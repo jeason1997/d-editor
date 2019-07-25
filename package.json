@@ -20,7 +20,6 @@
     "dependencies": {
         "rete": "^1.4.1-rc.1",
         "rete-connection-plugin": "^0.8.1",
-        "rete-vue-render-plugin": "^0.4.0",
-        "vue": "^2.6.10"
+        "rete-vue-render-plugin": "^0.4.0"
     }
 }
